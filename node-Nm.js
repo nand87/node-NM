@@ -22,6 +22,13 @@ const activeConnection = () => {
   });
 };
 
+const connectionShow = () => {
+	exec('nmcli connection show', (error, stdout) => {
+		console.log("Show actual connection");
+		console.log(stdout);
+	});
+}
+
 /** Function that show the general status of NetworkManager */
 const generalStatus = () => {
   exec('nmcli general status', (error, stdout) => {
@@ -98,13 +105,14 @@ const deviceStatus = () => {
 };
 
 
-exports.connectionConfigured = connectionConfigured;
-exports.activeConnection = activeConnection;
-exports.generalStatus = generalStatus;
-exports.connectionUp = connUp;
-exports.connectionDown = connDown;
-exports.wifiStatus = wifiStatus;
-exports.switchWifi = switchWifi;
-exports.listWifiAP = listWifi;
-exports.connectWifiAP = connectAP;
-exports.deviceStatus = deviceStatus;
+exports.connectionConfigured 	= connectionConfigured;
+exports.activeConnection 		= activeConnection;
+exports.connectionShow 			= connectionShow;
+exports.generalStatus 			= generalStatus;
+exports.connectionUp 			= connUp;
+exports.connectionDown 			= connDown;
+exports.wifiStatus 				= wifiStatus;
+exports.switchWifi 				= switchWifi;
+exports.listWifiAP 				= listWifi;
+exports.connectWifiAP 			= connectAP;
+exports.deviceStatus 			= deviceStatus;
