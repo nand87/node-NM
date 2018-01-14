@@ -23,7 +23,7 @@ var activeConnection = () => {
 }
 
 /** Function that show the general status of NetworkManager */
-var generalStatus = () => {
+var generalStatus = () =>{
 	exec("nmcli general status", (error, stdout, stderr) => {
 		console.log("General Status of NetworkManager");
 		console.log(stdout);
@@ -44,7 +44,7 @@ var connUp = (connName) => {
 }
 
 /** Function that disconnect to a passed Connection Name */
-var connDown = (connName) => {
+var connDown  = (connName) => {
 	exec("nmcli connection down id " + connName, (error, stdout, stderr) => {
 		if(error)
 		{
@@ -63,15 +63,15 @@ var wifiStatus = () => {
 	});
 }
 
-var switchWifi = (switch) => {
-	exec("nmcli radio wifi " + switch, (error, stdout, stderr) => {
+var switchWifi = (onOff) => {
+	exec("nmcli radio wifi " + onOff, (error, stdout, stderr) => {
 		if(stderr)
 		{
 			console.log("An error occurr during the switching of Wi-Fi");
 			return;
 		}
 
-		console.log("Wifi switched to %s", switch);
+		console.log("Wifi switched to %s", onOff);
 	});
 }
 
@@ -82,7 +82,7 @@ var listWifi = () => {
 	});
 }
 
-var connectAP = (ssid, pass) => {
+var connectAP = (ssid, pass) =>{
 	exec("nmcli device wifi connect " + ssid + " password " + pass, (error, stdout, stderr) => {
 		if(error)
 		{
@@ -100,6 +100,7 @@ var deviceStatus = () => {
 		console.log(stdout);
 	});
 }
+
 
 exports.connectionConfigured 	= connectionConfigured;
 exports.activeConnection 		= activeConnection;
