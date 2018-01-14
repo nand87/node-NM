@@ -1,0 +1,25 @@
+{
+  "name": "nm",
+  "version": "1.0.0",
+  "description": "",
+  "main": "node-Nm.js",
+  "dependencies": {},
+  "devDependencies": {
+    "eslint": "^4.15.0",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-plugin-import": "^2.8.0"
+  },
+  "scripts": {
+    "lint": "eslint --fix ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SlyAndrew/node-NM.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SlyAndrew/node-NM/issues"
+  },
+  "homepage": "https://github.com/SlyAndrew/node-NM#readme"
+}
