@@ -3,7 +3,10 @@
   "version": "1.0.0",
   "description": "",
   "main": "node-Nm.js",
-  "dependencies": {},
+  "dependencies": {
+    "@hapi/joi": "^15.1.1",
+    "moment": "^2.24.0"
+  },
   "devDependencies": {
     "eslint": "^4.15.0",
     "eslint-config-airbnb-base": "^12.1.0",

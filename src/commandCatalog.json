@@ -1,0 +1,29 @@
+{
+    "NMCLI": {
+        "main": "nmcli",
+        "connection": {
+            "main": "connection",
+            "show": "show",
+            "configured": "configured",
+            "active": "--active",
+            "up": "up",
+            "down": "down",
+            "id": "id"
+        },
+        "general": {
+            "main": "general",
+            "status": "status"
+        },
+        "radio": {
+            "main": "radio",
+            "wifi": "wifi"
+        },
+        "device": {
+            "main": "device",
+            "wifi": "wifi",
+            "list": "list",
+            "connect": "connect",
+            "status": "status"
+        }
+    }
+}
