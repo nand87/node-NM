@@ -1,5 +1,5 @@
 const moment = require('moment');
-const pid = process.env.pid;
+const pid = process.pid;
 
 const colors = {
     Reset: "\x1b[0m",
@@ -44,7 +44,7 @@ const logger = (method = 'debug', def) => {
     };
     let typePrint = '';
     if (def.param) typePrint = (typeof def === 'object') ? paramTypePrint.object : paramTypePrint.string;
-    console.log(`${nowDate()} [${pid}] ${colors.FgBlue} ${method} - [${functionName}] ${text} ${typePrint}`, def.param);
+    console.log(`${nowDate()} [${pid}] ${colors.FgBlue} ${method} - [${def.functionName}] ${def.text} ${typePrint}`, def.param);
 }
 
 const info = (functionName = '', text = '', param = undefined) => {
